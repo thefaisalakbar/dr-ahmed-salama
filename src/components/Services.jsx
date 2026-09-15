@@ -6,21 +6,12 @@ import { useLang } from '../i18n/LanguageContext.jsx'
 
 const ICONS = [ShieldCheck, Layers, Ruler, HeartHandshake, Hand, AlertTriangle, Sparkles, Droplet]
 const SERVICE_IMAGES = [
-  {
-    src: '/images/gallery-1.jpg',
-    alt: 'Child friendly dental consultation',
-    label: 'First visits',
-  },
-  {
-    src: '/images/gallery-2.jpg',
-    alt: 'Child smiling after treatment',
-    label: 'Healthy smiles',
-  },
-  {
-    src: '/images/gallery-3.jpg',
-    alt: 'Pediatric dentist treating a child',
-    label: 'Gentle care',
-  },
+  { src: '/images/gallery-1.jpg', alt: 'Child friendly dental consultation', label: 'First visits' },
+  { src: '/images/gallery-2.jpg', alt: 'Child smiling after treatment', label: 'Healthy smiles' },
+  { src: '/images/gallery-3.jpg', alt: 'Pediatric dentist treating a child', label: 'Gentle care' },
+  { src: '/images/gallery-4.jpg', alt: 'Pediatric dentistry in clinic', label: 'Calm visits' },
+  { src: '/images/gallery-5.jpg', alt: 'Family support in the clinic', label: 'Family trust' },
+  { src: '/images/headshot.jpg', alt: 'Dr. Ahmed Adel Salama smiling with a child patient', label: 'Specialist care' },
 ]
 
 export default function Services() {
@@ -53,14 +44,17 @@ export default function Services() {
           <p className="text-muted text-base sm:text-lg mt-5 leading-relaxed">{t.services.sub}</p>
         </div>
 
-        <div className="mb-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mb-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {SERVICE_IMAGES.map((image) => (
-            <div key={image.label} className="group relative overflow-hidden rounded-[28px] border border-divider bg-surface shadow-sm shadow-primary/5">
+            <div
+              key={image.label}
+              className="group relative overflow-hidden rounded-[28px] border border-divider bg-surface shadow-sm shadow-primary/5"
+            >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className="h-64 w-full object-cover object-center transition duration-500 group-hover:scale-105"
+                className="h-60 w-full object-cover object-center transition duration-500 group-hover:scale-105"
                 style={{ objectPosition: 'center top' }}
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/85 via-deep/35 to-transparent p-4">
